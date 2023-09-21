@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+body{
+    background-color: rgb(144 222 104);
+}
+.container{
+    /* background-color: rgb(144 222 104); */
+    display: flex;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upper{
+    border: 5px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: 25%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+#gameName{
+    margin: 25px;
+}
+
+#score{
+    display: flex;
+    width: 40%;
+}
+#comScore{
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  background-color: white;
+  width: 40%;
+  height: 80%;
+  margin: 15px;
+  font-size: 15px;
+  font-weight:800;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+#myScore{
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    width: 40%;
+    height: 80%;
+    margin: 15px;
+    font-size: 15px;
+    font-weight:800;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.lower{
+    width: 400px;
+    margin-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url("https://raw.githubusercontent.com/codeSTACKr/rock-paper-scissors-video/87d59ddb4a104b111ab68be1a0989f718da23a5e/images/bg-triangle.svg" );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px 200px;
+
+}
+#rule{
+    width: 90px;
+    height: 50px;
+    color: white;
+    background-color: rgb(144 222 104);
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font:larger;
+    font-weight: 900;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+#rule:hover{
+    background-color: white;
+    color: black;
+}
+#next{
+    width: 90px;
+    height: 50px;
+    color: white;
+    background-color: rgb(144 222 104);
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font:larger;
+    font-weight: 900;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 140px;
+    display: none;
+}
+#next:hover{
+    background-color: white;
+    color: black;
+}
+.stone{
+  width: 115px;
+  height: 115px;
+  background-color: #f3f0f0;
+  border: 10px solid blue;
+  border-radius: 50%;
+  margin: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 6px 5px 39px;
+ 
+}
+.paper{
+    width: 115px;
+    height: 115px;
+    background-color: #f3f0f0;
+    border: 10px solid green;
+  border-radius: 50%;
+  margin: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 6px 5px 39px;
+ 
+}
+.scissor{
+    width: 115px;
+    height: 115px;
+    background-color: #f3f0f0;
+    border: 10px solid orange;
+  border-radius: 50%;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 6px 5px 39px;
+ 
+}
+.stone:hover{
+    width: 120px;
+    height: 120px;
+    border: 7px solid blue;
+    box-shadow: 6px 5px 39px white;
+}
+.paper:hover{
+    width: 120px;
+    height: 120px;
+    border: 7px solid green;
+    box-shadow: 6px 5px 39px white;
+}
+.scissor:hover{
+    width: 120px;
+    height: 120px;
+    border: 7px solid orange;
+    box-shadow: 6px 5px 39px white;
+}
+#rules{
+    background-color: rgb(57, 94, 57);
+    border: 10px solid white;
+    position: absolute;
+    right: 25px;
+    bottom: 100px; 
+    border-radius: 15px; 
+    height: 300px;
+    width: 250px; 
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display:none;
+   
+}
+#cross{
+    background-color: red;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#cross:hover{
+    width: 43px;
+    height: 43px;
+    border: 3px solid white;
+}
+.contest{
+    margin: 30px;
+    display: none;
+}
+.userHand p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.pcHand p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+.referee h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.referee h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    /* letter-spacing: 2px; */
+}
+.handImageContainer{
+    width: 110px;
+    height: 110px;
+    background-color: #f3f0f0;
+    border: 10px solid orange;
+    border-radius: 50%;
+    box-shadow: 6px 5px 39px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pcImageContainer{
+    width: 110px;
+    height: 110px;
+    background-color: #f3f0f0;
+    border: 10px solid blue;
+    border-radius: 50%;
+    box-shadow: 6px 5px 39px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.userHand, .pcHand,.referee{
+ margin: 20px;
+ text-align: center;
+ color: white;
+}
+.playAgain{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    opacity: 80%;
+}
+.playAgain:hover{
+    background-color: rgb(230, 219, 200);
+    transform: translate3d(0px,-2px,0px);
+}
+
+.hurray{
+    /* margin-top: 0vh; */
+   /* height: 84vh; */
+   width: 98vw;
+   background-color: rgb(144 222 104);
+   display: none;
+   /* border: 2px solid red; */
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   /* top: 10px; */
+   /* top: 100%; */
+   /* left: 0;
+   right: 0;
+   bottom: 0; */
+   /* background-color: rgb(60, 105, 60); */
+}
+.imagePortion{
+    background-image: url("images/sparkles.png" );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 35% 80%;
+    height: 48vh;
+    /* margin-top: 0%; */
+    text-align: center;    
+    /* margin-top: 30%; */
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* top: 20px; */
+    /* left: 0; */
+    /* right: 0; */
+    display: block;
+    /* position: relative; */
+    /* bottom: 50%; */
+}
+#image{
+    position:relative;
+    bottom:10%;
+    /* left: 42%; */
+    /* right: 30%; */
+    text-align: center;
+}
+.contentPortion{
+    height: 48vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 0; */
+    /* right: 0; */
+}
+#hurr{
+    color: white;
+    font-size: 80px;
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+#youWon{
+    margin-top: 10px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+ #ruleOfHurray{
+    width: 90px;
+    height: 50px;
+    color: white;
+    background-color: rgb(144 222 104);
+    border: 5px solid white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font:larger;
+    font-weight: 900;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+#ruleOfHurray:hover{
+    background-color: white;
+    color: black;
+} 
+
+#rulesOfHurray{
+    background-color: rgb(57, 94, 57);
+    border: 10px solid white;
+    position: absolute;
+    right: 25px;
+    bottom: 100px; 
+    border-radius: 15px; 
+    height: 300px;
+    width: 250px; 
+    color: white;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display:none;
+}
+#crossOfHurray{
+    background-color: red;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#crossOfHurray:hover{
+    width: 43px;
+    height: 43px;
+    border: 3px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

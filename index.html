@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="upper">
+            <div id="gameName">
+                   <img src="https://raw.githubusercontent.com/codeSTACKr/rock-paper-scissors-video/87d59ddb4a104b111ab68be1a0989f718da23a5e/images/logo.svg" alt="">
+            </div>
+            <div id="score">
+                <div id="comScore"><P>COMPUTER<br>SCORE</P><h1>0</h1></div>
+                <div id="myScore"><P>YOUR<br> SCORE</P><h1>0</h1></div>  
+            </div>
+       </div>
+       <div class="lower">
+           <div class="stone" onclick="pickUserHand('stone')" ><button style="border: none;"><img src="images/stone.png" alt="" style="cursor: pointer;" ></button></div>
+           <div class="paper" onclick="pickUserHand('paper')"><button style="border: none;"><img src="images/paper.png" alt=""
+            style="cursor: pointer;"></button></div>
+           <div class="scissor" onclick="pickUserHand('scissor')"><button style="border: none;"><img src="images/scissor.png" alt="" style="cursor: pointer;"></button></div>
+        </div>
+        <div class="contest">
+            <div class="userHand">
+              <p>YOU PICKED</p>
+              <div class="handImageContainer">
+                <img id="userPickedImage" src="images/stone.png" alt="">
+              </div>
+            </div>
+            <div class="referee">
+                <h1 class="decision">YOU WIN</h1>
+                <h2 class="against">AGAINST  PC</h2>
+                <div><button class="playAgain" onclick="restartGame()">PLAY AGAIN</button></div>
+            </div>
+            <div class="pcHand">
+                <p>PC PICKED</p>
+                <div class="pcImageContainer">
+                  <img id="pcPickedImage" src="images/paper.png" alt="">
+                </div> 
+            </div>
+        </div>
+        <div id="rules">
+            <h1 style="color: white; text-align: center;">Game Rules</h1>
+            <ul style="list-style:square ">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.
+                </li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor nns or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+            <div id="cross">
+               <img src="images/X.png" style="height: 20px; width: 20px; " alt="">
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div><button id="next">NEXT</button></div>
+            <div><button id="rule" >RULE</button></div>
+        </div> 
+    </div>
+    <div class="hurray">
+       <div class="imagePortion"> <img id="image" src="images/troffey.png" alt="" style="margin-top: 10% ;"  > </div>
+
+       <div class="contentPortion">
+        <p id="hurr">HURRAY!!</p>
+        <p id="youWon">YOU WON THE GAME</p>
+        <div><button class="playAgain" onclick="restartGameOnFinalPage()" style="margin-bottom: 20px;">PLAY AGAIN</button>
+       </div>
+       <div id="rulesOfHurray">
+        <h1 style="color: white; text-align: center;">Game Rules</h1>
+        <ul style="list-style:square ">
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor nns or simply play to pass the time</li>
+            <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+        <div id="crossOfHurray">
+           <img src="images/X.png" style="height: 20px; width: 20px; " alt="">
+        </div>
+        </div>
+       <div><button id="ruleOfHurray" >RULE</button></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
